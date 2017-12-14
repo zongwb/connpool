@@ -1,0 +1,8 @@
+A simple connection pool implemented in Golang.
+
+It maintains two pools internally. The base pool will not shrink in size, 
+   and the expanded pool will shrink if connections are not used for some time.
+   This is useful when the backend (e.g. MySQL server) kills inactive connections.
+
+This implementation can be easily generalized into a resource pool. The necessary
+changes should be obvious when reading the code.
